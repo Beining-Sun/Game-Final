@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  /* 三列等宽 */
+  grid-template-rows: 1fr 1fr 1fr 1fr; /* 四行等宽 */
+  gap: 10px;
+  height: 95vh;
+}
+
+/* 区块样式 */
+#Pronunciation {
+  grid-column: 3 / 4; /* 占第3列 */
+  grid-row: 4 / 5; /* 占第4行 */
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+/* 区块样式 */
+#Instructions {
+  grid-column: 3 / 4; /* 占第3列 */
+  grid-row: 2 / 4; /* 占第2, 3行 */
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+#Stovetop {
+  grid-column: 1 / 3;  /* 占第1、2列 */
+  grid-row: 2 / 5;     /* 占第2、3、4行 */
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* 水平居中 */
+  align-items: center;      /* 垂直居中 */
+}
+
+#Inventory {
+  grid-column: 1 / 4;  /* 从第1列到第3列（不含3）= 占1,2列 */
+  grid-row: 1 / 2;     /* 占第1行 */
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 6列 */
+  grid-template-rows: 1fr; /* 1行 */
+  gap: 10px;
+}
+
+/* 每个格子的样式 */
+.inventory-item {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+/* SVG 设置为正方形并填充为黑色 */
+.inventory-item svg {
+  width: 100%;
+  height: 100%;
+  max-width: 100px;
+  max-height: 100px;
+/*  fill: black;*/
+}
+
+/* 用于跟随鼠标的 SVG 克隆 */
+.floating-svg {
+  position: absolute;
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  z-index: 1000;
+}
+
+
+.svg-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-label {
+  margin-top: 6px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+
+
+
